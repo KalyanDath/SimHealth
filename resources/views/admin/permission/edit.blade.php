@@ -9,18 +9,18 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg px-4 py-4">
-                    <x-jet-validation-errors class="mb-4" />
+                    <x-validation-errors class="mb-4" />
                     <form method="POST" action="{{ route('permission.update', $permission) }}">
                         @csrf
                         @method('PUT')
                         <div>
-                            <x-jet-label for="name" value="{{ __('Name') }}" />
-                            <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="$permission->name" required autofocus autocomplete="name" />
+                            <x-label for="name" value="{{ __('Name') }}" />
+                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="$permission->name" required autofocus autocomplete="name" />
                         </div>
                         <div class="flex mt-4">
-                            <x-jet-button>
+                            <x-button>
                                 {{ __('Save') }}
-                            </x-jet-button>
+                            </x-button>
                         </div>
                     </form>
                 </div>

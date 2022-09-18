@@ -24,6 +24,9 @@
                     <x-nav-link href="{{ route('permission.index') }}" :active="request()->routeIs('permission.*')">
                         {{ __('Permission') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('role.index') }}" :active="request()->routeIs('role.*')">
+                        {{ __('Roles') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -157,6 +160,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('permission.index') }}" :active="request()->routeIs('permission.*')">
                 {{ __('Permission') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('role.index') }}" :active="request()->routeIs('role.*')">
+                {{ __('Roles') }}
             </x-responsive-nav-link>
         </div>
 
