@@ -25,8 +25,8 @@
                         </div>
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
                             <div>
-                                <x-label for="location" value="{{ __('Location') }}" />
-                                <x-input id="location" class="block mt-1 w-full" type="text" name="location" :value="old('location')" required autofocus autocomplete="location" />
+                                <x-label for="specialization" value="{{ __('Specialization') }}" />
+                                <x-input id="specialization" class="block mt-1 w-full" type="text" name="specialization" :value="old('specialization')" required autofocus autocomplete="specialization" />
                             </div>
 
                             <div>

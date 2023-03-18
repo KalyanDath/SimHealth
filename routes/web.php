@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\HospitalController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,5 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('hospital', HospitalController::class);
+    Route::resource('doctor', DoctorController::class);
 });
