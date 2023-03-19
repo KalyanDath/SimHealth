@@ -1,9 +1,9 @@
 # SimHealth
-## Centralized Hospital Record Management
+## Centralized Database System for Hospital Management
 
 The process of keeping patient information in different health facilities in a particular
 country leads to data redundancy and also affects the time it takes for a physician to attend to a
-patient when they first visit. Thus, the project aims to implement a centralized data management
+patient when he/she first visits. Thus, the project aims to implement a centralized data management
 system. A centralized system helps to reduce the risk of errors and improves the accuracy of the
 data. It also helps to reduce the cost of maintaining multiple systems. There are also many
 problems when scheduling an appointment with the doctor, such as patients having to wait in
@@ -40,15 +40,15 @@ long queues.
 1. Navigate to the application's URL on your web browser.
 2. Sign in using allocated credentials of the hospital.
 3. Add doctors in the hospital to the system.
-4. View all Pending Appointments.
+4. View all pending Appointments.
 5. Access and analyze the data related to the doctors' performance, including their success rates, patient outcomes, and medical practices(TO DO).
 
 ## Usage - Doctors
-1. Naviagte to the application's URL on your web browser.
+1. Navigate to the application's URL on your web browser.
 2. Sign in using allocated crendentials of the doctor.
 3. View all the pending appointments.
 4. View the medical records of the patient appointed to him/her.
-5. Add the diagonsis and treatmet provided to the patient as new medical record.
+5. Add the diagnosis and treatment provided to the patient as new medical record.
 
 ## Usage - Patients
 1. Navigate to the application's URL on your web browser.
@@ -60,7 +60,7 @@ long queues.
 ## Potential Features(Future)
 1. Implement virtual queues which uses efficient algorithms to allocate appointments for patients.
 2. Implement emergency mode which efficiently directs patients to available hospitals and to warn nearby hospitals about the emergencies.
-3. Remainders for Patients to take medication at the correct time.
+3. Remainders for patients to take medication at the correct time.
 4. Analyse the performance of doctors and the particular hospital to further improve efficiency of the organization.
 
 ## License
