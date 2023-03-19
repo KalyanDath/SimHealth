@@ -33,11 +33,11 @@ long queues.
 3. Can now access evey module in the system.
 4. New Hospitals can be registered.
 5. Add Doctors to corresponding hospitals.
-6. Assign Roles for Authorized Access of Data
+6. Assign Roles for Authorized Access of Data.
 7. View all the Pending Appointments.
 
 ## Usage - Hospitals
-1. Naviagte to the application's URL on your web browser.
+1. Navigate to the application's URL on your web browser.
 2. Sign in using allocated credentials of the hospital.
 3. Add doctors in the hospital to the system.
 4. View all Pending Appointments.
@@ -51,7 +51,7 @@ long queues.
 5. Add the diagonsis and treatmet provided to the patient as new medical record.
 
 ## Usage - Patients
-1. Naviagte to the application's URL on your web browser.
+1. Navigate to the application's URL on your web browser.
 2. If not registered already, register by filling the details.
 3. Sign in using the allocated credentials of the patient.
 4. Make appointments to a doctor specialized in the appropriate field at the required hospital.
