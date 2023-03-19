@@ -11,11 +11,11 @@ long queues.
 
 ## Features
 * Registration of Hospitals to the Centralized Database
-* Adding the Doctors in a Hospital by the Hospital Admin
+* Adding Doctors in a Hospital by the Hospital Admin
 * Patient Registration and Login
 * Doctor Appointment and Management
 * Provide the Doctor with medical records of the consulting patients.
-* Role Based Authorization of Data.
+* Role Based Authorization of Data (Data Protection).
 
 ## Technologies Used
 * PHP
