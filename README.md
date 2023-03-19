@@ -41,7 +41,7 @@ long queues.
 2. Sign in using allocated credentials of the hospital.
 3. Add doctors in the hospital to the system.
 4. View all pending Appointments.
-5. Access and analyze the data related to the doctors' performance, including their success rates, patient outcomes, and medical practices(TO DO).
+
 
 ## Usage - Doctors
 1. Navigate to the application's URL on your web browser.
@@ -62,6 +62,7 @@ long queues.
 2. Implement emergency mode which efficiently directs patients to available hospitals and to warn nearby hospitals about the emergencies.
 3. Remainders for patients to take medication at the correct time.
 4. Analyse the performance of doctors and the particular hospital to further improve efficiency of the organization.
+5. Access and analyze the data related to the doctors' performance, including their success rates, patient outcomes, and medical practices.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
