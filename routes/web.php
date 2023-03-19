@@ -3,6 +3,7 @@
 use App\Http\Controllers\AppoinmentController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\HospitalController;
+use App\Http\Controllers\RecordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,4 +33,5 @@ Route::middleware([
     Route::resource('hospital', HospitalController::class);
     Route::resource('doctor', DoctorController::class);
     Route::resource('appoinment', AppoinmentController::class);
+    Route::resource('record', RecordController::class);
 });

@@ -15,4 +15,12 @@ class Patient extends Model
         'dob',
         'gender',
     ];
+
+    /**
+     * Get the user that owns the pateint.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
