@@ -1,5 +1,5 @@
 # SimHealth
-##Centralized Hospital Record Management
+## Centralized Hospital Record Management
 
 The process of keeping patient information in different health facilities in a particular
 country leads to data redundancy and also affects the time it takes for a physician to attend to a
