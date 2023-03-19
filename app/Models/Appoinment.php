@@ -23,4 +23,12 @@ class Appoinment extends Model
     {
         return $this->belongsTo(Doctor::class);
     }
+
+    /**
+     * Get the patient that owns the appoinment.
+     */
+    public function patient()
+    {
+        return $this->belongsTo(Patient::class);
+    }
 }

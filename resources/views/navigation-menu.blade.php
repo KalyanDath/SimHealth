@@ -15,18 +15,26 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('hospital.index') }}" :active="request()->routeIs('hospital.index')">
+                    @can('manage hospital')
+                    <x-nav-link href="{{ route('hospital.index') }}" :active="request()->routeIs('hospital.*')">
                         {{ __('Hospital') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('doctor.index') }}" :active="request()->routeIs('doctor.index')">
+                    @endcan
+                    @can('manage doctors')
+                    <x-nav-link href="{{ route('doctor.index') }}" :active="request()->routeIs('doctor.*')">
                         {{ __('Doctor') }}
                     </x-nav-link>
+                    @endcan
+                    @can('manage permissions')
                     <x-nav-link href="{{ route('permission.index') }}" :active="request()->routeIs('permission.*')">
                         {{ __('Permission') }}
                     </x-nav-link>
+                    @endcan
+                    @can('manage roles')
                     <x-nav-link href="{{ route('role.index') }}" :active="request()->routeIs('role.*')">
                         {{ __('Roles') }}
                     </x-nav-link>
+                    @endcan
                     <x-nav-link href="{{ route('appoinment.index') }}" :active="request()->routeIs('appoinment.*')">
                         {{ __('Appoinment') }}
                     </x-nav-link>
@@ -155,18 +163,26 @@
             <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            @can('manage hospital')
             <x-responsive-nav-link href="{{ route('hospital.index') }}" :active="request()->routeIs('hospital')">
                 {{ __('Hospital') }}
             </x-responsive-nav-link>
+            @endcan
+            @can('manage doctors')
             <x-responsive-nav-link href="{{ route('doctor.index') }}" :active="request()->routeIs('doctor')">
                 {{ __('Doctor') }}
             </x-responsive-nav-link>
+            @endcan
+            @can('manage permissions')
             <x-responsive-nav-link href="{{ route('permission.index') }}" :active="request()->routeIs('permission.*')">
                 {{ __('Permission') }}
             </x-responsive-nav-link>
+            @endcan
+            @can('manage roles')
             <x-responsive-nav-link href="{{ route('role.index') }}" :active="request()->routeIs('role.*')">
                 {{ __('Roles') }}
             </x-responsive-nav-link>
+            @endcan
             <x-responsive-nav-link href="{{ route('appoinment.index') }}" :active="request()->routeIs('appoinment.*')">
                 {{ __('Appoinment') }}
             </x-responsive-nav-link>

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('doctor') }}
+            {{ __('Doctor') }}
         </h2>
     </x-slot>
 
@@ -20,7 +20,7 @@
 
                             <div>
                                 <x-label for="email" value="{{ __('Email') }}" />
-                                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="$doctor->user->email" required autocomplete="username" />
+                                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="$doctor->user->email" required autocomplete="email" />
                             </div>
                         </div>
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">

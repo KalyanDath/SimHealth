@@ -10,7 +10,9 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg px-4 py-4">
                     <div class="flex justify-between items-center">
+                        @can('appointment create')
                         <x-link href="{{ route('appoinment.create') }}" class="m-4">Appoinment</x-link>
+                        @endcan
                         <form class="m-4" method="GET" action="{{ route('appoinment.index') }}">
                             <div class="flex w-56">
                                 <div class="relative w-full">
@@ -28,9 +30,15 @@
                     <table class="w-full text-sm text-left text-gray-500">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                             <tr>
+                                @can('appointment create')
                                 <th scope="col" class="px-6 py-3">
                                     {{ __('Doctor') }}
                                 </th>
+                                @else
+                                <th scope="col" class="px-6 py-3">
+                                    {{ __('Patient') }}
+                                </th>
+                                @endcan
                                 <th scope="col" class="px-6 py-3">
                                     {{ __('Date') }}
                                 </th>
@@ -45,9 +53,15 @@
                         <tbody>
                             @forelse ($appoinments as $appoinment)
                             <tr class="bg-white border-b">
+                                @can('appointment create')
                                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                     {{ $appoinment->doctor->user->name }}
                                 </td>
+                                @else
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    {{ $appoinment->patient->user->name }}
+                                </td>
+                                @endcan
                                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                     {{ $appoinment->appointment_date }}
                                 </td>

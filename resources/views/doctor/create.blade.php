@@ -20,7 +20,7 @@
 
                             <div>
                                 <x-label for="email" value="{{ __('Email') }}" />
-                                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="email" />
                             </div>
                         </div>
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
@@ -31,7 +31,7 @@
 
                             <div>
                                 <x-label for="contact" value="{{ __('Contact') }}" />
-                                <x-input id="contact" class="block mt-1 w-full" type="text" name="contact" :value="old('contact')" required autocomplete="username" />
+                                <x-input id="contact" class="block mt-1 w-full" type="text" name="contact" :value="old('contact')" required autocomplete="contact" />
                             </div>
                         </div>
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">

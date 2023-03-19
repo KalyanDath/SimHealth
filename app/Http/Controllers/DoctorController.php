@@ -15,6 +15,7 @@ class DoctorController extends Controller
      */
     public function index()
     {
+        $this->authorize('manage doctors');
         $doctors = Doctor::latest()->paginate(5);
         return view('doctor.index', compact('doctors'));
     }
@@ -24,6 +25,7 @@ class DoctorController extends Controller
      */
     public function create()
     {
+        $this->authorize('manage doctors');
         return view('doctor.create');
     }
 
@@ -32,6 +34,7 @@ class DoctorController extends Controller
      */
     public function store(StoreDoctorRequest $request)
     {
+        $this->authorize('manage doctors');
         $request->validated();
         $user = User::create([
             'name' => $request['name'],
@@ -43,7 +46,8 @@ class DoctorController extends Controller
             'specialization' => $request['specialization'],
             'contact' => $request['contact'],
         ]);
-        return redirect(url()->previous());
+        $user->assignRole('Doctor');
+        return redirect()->route('doctor.index');
     }
 
     /**
@@ -59,6 +63,7 @@ class DoctorController extends Controller
      */
     public function edit(Doctor $doctor)
     {
+        $this->authorize('manage doctors');
         return view('doctor.edit', compact('doctor'));
     }
 
@@ -67,6 +72,7 @@ class DoctorController extends Controller
      */
     public function update(UpdateDoctorRequest $request, Doctor $doctor)
     {
+        $this->authorize('manage doctors');
         $doctor->update($request->validated());
         return redirect()->route('doctor.index');
     }
@@ -76,6 +82,8 @@ class DoctorController extends Controller
      */
     public function destroy(Doctor $doctor)
     {
-        //
+        $this->authorize('manage doctors');
+        $doctor->delete();
+        return redirect()->route('doctor.index');
     }
 }

@@ -15,6 +15,7 @@ class HospitalController extends Controller
      */
     public function index()
     {
+        $this->authorize('manage hospital');
         $hospitals = Hospital::latest()->paginate(5);
         return view('hospital.index', compact('hospitals'));
     }
@@ -24,6 +25,7 @@ class HospitalController extends Controller
      */
     public function create()
     {
+        $this->authorize('manage hospital');
         return view('hospital.create');
     }
 
@@ -32,6 +34,7 @@ class HospitalController extends Controller
      */
     public function store(StoreHospitalRequest $request)
     {
+        $this->authorize('manage hospital');
         $request->validated();
         $user = User::create([
             'name' => $request['name'],
@@ -43,7 +46,8 @@ class HospitalController extends Controller
             'location' => $request['location'],
             'contact' => $request['contact'],
         ]);
-        return redirect(url()->previous());
+        $user->assignRole('Hospital Admin');
+        return redirect()->route('hospital.index');
     }
 
     /**
@@ -59,6 +63,7 @@ class HospitalController extends Controller
      */
     public function edit(Hospital $hospital)
     {
+        $this->authorize('manage hospital');
         return view('hospital.edit', compact('hospital'));
     }
 
@@ -67,6 +72,7 @@ class HospitalController extends Controller
      */
     public function update(UpdateHospitalRequest $request, Hospital $hospital)
     {
+        $this->authorize('manage hospital');
         $hospital->update($request->validated());
         return redirect()->route('hospital.index');
     }
@@ -76,6 +82,8 @@ class HospitalController extends Controller
      */
     public function destroy(Hospital $hospital)
     {
-        //
+        $this->authorize('manage hospital');
+        $hospital->delete();
+        return redirect()->route('hospital.index');
     }
 }

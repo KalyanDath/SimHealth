@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg px-4 py-4">
                     <div class="flex justify-between items-center">
-                        <x-link href="{{ route('hospital.create') }}" class="m-4">Create Event</x-link>
+                        <x-link href="{{ route('hospital.create') }}" class="m-4">Create Hospital</x-link>
                         <form class="m-4" method="GET" action="{{ route('hospital.index') }}">
                             <div class="flex w-56">
                                 <div class="relative w-full">
